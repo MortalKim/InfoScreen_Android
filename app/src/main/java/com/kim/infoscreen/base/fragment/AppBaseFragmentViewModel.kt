@@ -13,7 +13,7 @@ package com.kim.infoscreen.base.fragment
 import android.app.Application
 import me.goldze.mvvmhabit.base.BaseViewModel
 
-class AppBaseFragmentViewModel<Model : AppBaseFragmentModel?> : BaseViewModel<Model> {
+open class AppBaseFragmentViewModel<Model : AppBaseFragmentModel?> : BaseViewModel<Model> {
     constructor(application: Application) : super(application)
     constructor(application: Application, model: Model) : super(application, model)
 

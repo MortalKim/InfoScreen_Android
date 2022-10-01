@@ -12,5 +12,5 @@ package com.kim.infoscreen.base.fragment
 
 import me.goldze.mvvmhabit.base.BaseModel
 
-class AppBaseFragmentModel:BaseModel() {
+open class AppBaseFragmentModel:BaseModel() {
 }
