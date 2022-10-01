@@ -1,10 +1,10 @@
 /*
  * Copyright (c) 2022 . All rights reserved.
- * Created by MortalKim on 9/25/22, 11:34 PM
- * Email: jinhaihan@outlook.com
  * ProjectName: InfoScreen
  * FileName: ThreadUtils.java
- * LastModified: 9/25/22, 11:34 PM
+ * URL: https://github.com/MortalKim/InfoScreen_Android
+ * Email: jinhaihan@outlook.com
+ * LastModified: 10/1/22, 3:34 PM
  *
  */
 

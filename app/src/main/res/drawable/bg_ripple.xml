@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022 . All rights reserved.
+  ~ ProjectName: InfoScreen
+  ~ FileName: bg_ripple.xml
+  ~ URL: https://github.com/MortalKim/InfoScreen_Android
+  ~ Email: jinhaihan@outlook.com
+  ~ LastModified: 10/1/22, 3:34 PM
+  ~
+  -->
+
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <shape>

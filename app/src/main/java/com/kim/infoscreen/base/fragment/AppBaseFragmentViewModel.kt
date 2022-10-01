@@ -1,10 +1,10 @@
 /*
  * Copyright (c) 2022 . All rights reserved.
- * Created by MortalKim on 9/4/22, 4:44 PM
- * Email: jinhaihan@outlook.com
  * ProjectName: InfoScreen
  * FileName: AppBaseFragmentViewModel.kt
- * LastModified: 9/4/22, 4:44 PM
+ * URL: https://github.com/MortalKim/InfoScreen_Android
+ * Email: jinhaihan@outlook.com
+ * LastModified: 10/1/22, 3:34 PM
  *
  */
 

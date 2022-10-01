@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2022 . All rights reserved.
+  ~ ProjectName: InfoScreen
+  ~ FileName: colors.xml
+  ~ URL: https://github.com/MortalKim/InfoScreen_Android
+  ~ Email: jinhaihan@outlook.com
+  ~ LastModified: 10/1/22, 3:34 PM
+  ~
+  -->
+
 <resources>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
