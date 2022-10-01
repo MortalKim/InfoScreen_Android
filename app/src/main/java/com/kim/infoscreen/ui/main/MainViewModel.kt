@@ -25,25 +25,5 @@ import me.goldze.mvvmhabit.binding.command.BindingCommand
 
 
 class MainViewModel(application: Application):AppBaseViewModel<MainModel>(application,MainModel()) {
-    var showYear = ObservableInt(0)
-    var scrollToCurrentNotify = ObservableByte()
-    var textLunarVisibility = ObservableField(View.VISIBLE)
-    var textYearVisibility = ObservableField(View.VISIBLE)
-    var textMonthVisibility = ObservableField(View.VISIBLE)
-    var textMonthDay = ObservableField("123")
-    var textYear = ObservableField("123")
-    var textLunar = ObservableField("123")
-    var textCurrentDay = ObservableField("123")
 
-
-    var textMonthDayClickCommand: BindingCommand<*> = BindingCommand<Any?>(BindingAction {
-        showYear.notifyChange()
-        textLunarVisibility.set(GONE)
-        textYearVisibility.set(GONE)
-        textMonthDay.set(showYear.get().toString())
-    })
-
-    var toCurrent: BindingCommand<*> = BindingCommand<Any?>(BindingAction {
-        scrollToCurrentNotify.notifyChange()
-    })
 }

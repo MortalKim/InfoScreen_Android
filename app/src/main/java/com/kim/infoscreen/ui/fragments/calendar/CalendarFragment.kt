@@ -32,12 +32,7 @@ import com.kim.infoscreen.databinding.FragmentCalendarBinding
  * @author Hayne Kim
  * @email jinhaihan@outlook.com
  */
-class CalendarFragment:AppBaseFragment<FragmentCalendarBinding,CalendarViewModel>(),
-    CalendarView.OnCalendarSelectListener,
-    CalendarView.OnYearChangeListener,
-    View.OnClickListener{
-
-    private var mYear = 0
+class CalendarFragment:AppBaseFragment<FragmentCalendarBinding,CalendarViewModel>(){
 
     private val onPropertyChangedCallback = object : Observable.OnPropertyChangedCallback() {
         override fun onPropertyChanged(sender: Observable?, propertyId: Int) {
@@ -77,6 +72,9 @@ class CalendarFragment:AppBaseFragment<FragmentCalendarBinding,CalendarViewModel
         viewModel.textMonthDay.set(binding.calendarView.curMonth.toString() + "/" + binding.calendarView.curDay + "  ")
         viewModel.textLunar.set("Today")
         viewModel.textCurrentDay.set(binding.calendarView.curDay.toString())
+
+        binding.calendarView.setOnCalendarSelectListener(viewModel)
+        binding.calendarView.setOnYearChangeListener(viewModel)
     }
 
     fun initData2() {
@@ -129,28 +127,4 @@ class CalendarFragment:AppBaseFragment<FragmentCalendarBinding,CalendarViewModel
         calendar.addScheme(if (day % 2 == 0) -0x9a0000 else -0xbe961f, "记")
         return calendar
     }
-
-    override fun onCalendarOutOfRange(calendar: Calendar?) {}
-
-    @SuppressLint("SetTextI18n")
-    override fun onCalendarSelect(calendar: Calendar, isClick: Boolean) {
-        binding.tvLunar.visibility = View.VISIBLE
-        binding.tvYear.visibility = View.VISIBLE
-        binding.tvMonthDay.text = calendar.month.toString() + "/" + calendar.day + "  "
-        binding.tvYear.text = calendar.year.toString()
-        binding.tvLunar.text = calendar.lunar
-        mYear = calendar.year
-        Log.e(
-            "onDateSelected", "  -- " + calendar.year +
-                    "  --  " + calendar.month +
-                    "  -- " + calendar.day +
-                    "  --  " + isClick + "  --   " + calendar.scheme
-        )
-    }
-
-    override fun onYearChange(year: Int) {
-        binding.tvMonthDay.text = year.toString()
-    }
-
-    override fun onClick(view: View?) {}
 }
